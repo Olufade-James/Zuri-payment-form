@@ -1,6 +1,6 @@
 *{
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -10,7 +10,7 @@ body{
 }
 
 .wrapper {
-    background-color: #fff;
+    background-color: rgb(223, 222, 222);
     width: 500px;
     padding: 25px;
     margin: 25px auto 0;
@@ -18,13 +18,14 @@ body{
 }
 
 .wrapper h2{
-    background-color: #fcfcfc;
-    color: #7ed321;
+    background-color: #7ed321;
+    color: #fcfcfc;
     font-size: 24px;
     padding: 10px;
     margin-bottom: 20px;
     text-align: center;
     border: 1px dotted #333;
+    
 }
 
 h4{
@@ -32,7 +33,7 @@ h4{
     color: #7ed321;
 }
 
-input-group{
+.input-group{
     margin-bottom: 8px;
     width: 100%;
     position: relative;
@@ -51,7 +52,19 @@ input-group{
     margin-right: 0;
 }
 
-.name{
+.input-group:nth-of-type(6)
+input[type="tel"] {
+
+    height: 45px;
+    text-align: center;
+    border: 1px solid #00000033;
+    border-radius: 3px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    background-color: #fcfcfc;
+}
+
+ .name{
     padding: 14px 10px 14px 50px;
     width: 100%;
     background-color: #fcfcfc;
@@ -61,7 +74,7 @@ input-group{
     transition: 0.3s;
     border-radius: 3px;
     color: #333;
-}
+} 
 
 .name:focus, .dob:focus{
     -webkit-box-shadow:0 0 2px 1px #7ed32180;
@@ -88,6 +101,24 @@ input-group{
     border: 1px solid #00000033;
     border-right: none;
 }
+.input-box .fa-envelope{
+    width: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    color: #333;
+    background-color: #f1f1f1;
+    border-radius: 2px 0 0 2px;
+    transition: 0.3s;
+    font-size: 20px;
+    pointer-events: none;
+    border: 1px solid #00000033;
+    border-right: none;
+}
 .name:focus + .icon{
     background-color: #7ed321;
     color: #fff;
@@ -95,7 +126,13 @@ input-group{
     border: none;
     transition: 1s;
 }
-
+.name:focus + .fa-envelope{
+    background-color: #7ed321;
+    color: #fff;
+    border-right: 1px solid #7ed321;
+    border: none;
+    transition: 1s;
+}
 .dob{
     width: 30%;
     padding: 14px;
@@ -117,6 +154,7 @@ input-group{
     display: inline-block;
     text-align: center;
     border: 1px solid #c0bfbf;
+    float: left;
 }
 
 .input-box label:first-of-type{
@@ -146,4 +184,28 @@ input-group{
     text-align: center;
     font-size: 16px;
     outline: none;
+    border: 1px solid #c0bfbf;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    float: left;
+}
+.input-box select:focus {
+    background-color: #7ed321;
+    color: #fff;
+    text-align: center;
+}
+button {
+    width: 100%;
+    background: transparent;
+    border: none;
+    background: #7ed321;
+    color: #fff;
+    padding: 15px;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: all 0.35s ease;
+}
+button:hover {
+    cursor: pointer;
+    background: #5eb105;
 }
